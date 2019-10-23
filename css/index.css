@@ -162,6 +162,9 @@ html {
     padding-right: 10px;
   }
 }
+section {
+  margin: 10px 0;
+}
 header {
   display: flex;
   justify-content: flex-end;
@@ -204,4 +207,56 @@ header nav a::before {
 header nav a:hover::before {
   top: 0%;
   height: 100%;
+}
+section#about {
+  margin-top: 40px;
+}
+section#about hr {
+  margin: 50px 0;
+  border: 1px solid #ededed;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+.intro img {
+  width: 270px;
+  border-radius: 100%;
+}
+@media (max-width: 800px) {
+  .intro img {
+    margin-bottom: 30px;
+  }
+}
+.intro .intro-title {
+  margin-left: 50px;
+}
+@media (max-width: 800px) {
+  .intro .intro-title {
+    margin-left: 0px;
+  }
+}
+.intro h1 {
+  font-size: 4rem;
+}
+@media (max-width: 800px) {
+  .intro h1 {
+    font-size: 3rem;
+  }
+}
+.intro h2 {
+  font-size: 2.5rem;
+  margin-top: 5px;
+  opacity: 0.2;
+}
+@media (max-width: 800px) {
+  .intro h2 {
+    font-size: 2rem;
+  }
 }
