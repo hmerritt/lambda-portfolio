@@ -158,8 +158,8 @@ html {
 @media (max-width: 1250px) {
   .container {
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .slide-up--hover {
@@ -167,7 +167,10 @@ html {
   height: 100%;
 }
 section {
-  margin: 10px 0;
+  margin: 50px 0;
+}
+section h2 {
+  font-size: 2.4rem;
 }
 .btn {
   display: inline-block;
@@ -177,7 +180,7 @@ section {
   overflow: hidden;
   border-radius: 4px;
   text-decoration: none;
-  background-color: #f5f5f5;
+  background-color: #E5F5FF;
   color: #333;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
@@ -195,7 +198,7 @@ section {
   width: 100%;
   height: 0%;
   z-index: -1;
-  background-color: #E5F5FF;
+  background-color: #ffefe5;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   -o-transition: all 250ms ease;
@@ -307,11 +310,128 @@ section#about .intro h2 {
 }
 section#about p {
   text-align: justify;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.2em;
+  padding: 0 10%;
 }
 section#about a.btn {
   font-size: 2rem;
   margin: 28px auto;
+}
+section#skills .skills-container {
+  margin: 40px 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+@media (max-width: 800px) {
+  section#skills .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+section#skills .skills-container .skill-box {
+  position: relative;
+  flex-grow: 1;
+  height: 200px;
+  margin: 20px;
+  cursor: default;
+  background-color: #fafafa;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+section#skills .skills-container .skill-box:hover {
+  background-color: transparent;
+  -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.25);
+}
+section#skills .skills-container .skill-box:hover .icon {
+  color: #ff808f;
+}
+section#skills .skills-container .skill-box::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  background-color: #ffefe5;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+section#skills .skills-container .skill-box:hover::before {
+  top: 0%;
+  height: 100%;
+}
+section#skills .skills-container .skill-box .icon {
+  display: block;
+  font-size: 5rem;
+  color: #80ceff;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+section#skills .skills-container .skill-box h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+@media (max-width: 800px) {
+  section#skills .skills-container .skill-box {
+    width: 88%;
+  }
+}
+@media (max-width: 500px) {
+  section#skills .skills-container .skill-box {
+    width: 100%;
+    margin: 5px;
+  }
+}
+section#contact .contact-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  section#contact .contact-container {
+    flex-flow: column;
+  }
+  section#contact .contact-container div {
+    margin-bottom: 20px;
+  }
+}
+section#contact .contact-container div:first-of-type {
+  margin-right: 80px;
+}
+@media (max-width: 800px) {
+  section#contact .contact-container div:first-of-type {
+    margin-right: 0px;
+  }
+}
+section#contact .contact-container a {
+  color: #333;
+  font-size: 2rem;
+  text-decoration: none;
+}
+section#contact .contact-container i {
+  font-size: 3rem;
+  margin-right: 10px;
 }
 footer {
   display: flex;
