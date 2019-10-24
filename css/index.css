@@ -402,6 +402,35 @@ section#skills .skills-container .skill-box h3 {
     margin: 5px;
   }
 }
+section#work .work-list {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column;
+}
+section#work .work-list .work-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 30px 50px;
+  border-bottom: 1px solid #ccc;
+}
+section#work .work-list .work-item h3 {
+  width: 100px;
+  font-size: 1.7rem;
+}
+section#work .work-list .work-item p {
+  color: #555;
+  font-size: 1.3rem;
+  margin-left: 50px;
+  vertical-align: middle;
+}
+section#work .work-list .work-item p::before {
+  position: relative;
+  left: -10px;
+  content: "• ";
+  font-size: 2rem;
+  color: #444;
+}
 section#contact .contact-container {
   margin: 20px;
   display: flex;
