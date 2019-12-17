@@ -1,0 +1,49 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+//  google fonts
+//  - Montserrat
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 62.5%;
+}
+
+
+.btn {
+	display: inline-block;
+	position: relative;
+	padding: 12px 30px;
+	margin: 10px 0;
+	overflow: hidden;
+	border-radius: 4px;
+	text-decoration: none;
+	background-color: @primary-color;
+	color: #333;
+	.transition();
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	&::before {
+		.slide-up(@primary-complementary-color);
+		.transition();
+	}
+	&:hover::before {
+		.slide-up--hover();
+	}
+
+	.large {
+		padding: 20px 60px;
+	} // large
+} // btn

@@ -1,0 +1,36 @@
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+
+	@media (max-width: 1700px) {
+		width: 1000px;
+	}
+	@media (max-width: 1250px) {
+		width: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.transition (@time: 250ms, @property: all, @function: ease) {
+	-webkit-transition: @property @time @function;
+	   -moz-transition: @property @time @function;
+	     -o-transition: @property @time @function;
+	        transition: @property @time @function;
+}
+
+.slide-up (@bgcolor: #f7f7f7) {
+	position: absolute;
+	content: '';
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 0%;
+	z-index: -1;
+	background-color: @bgcolor;
+}
+.slide-up--hover {
+	top: 0%;
+	height: 100%;
+}
